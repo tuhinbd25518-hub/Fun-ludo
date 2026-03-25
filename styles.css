@@ -1,0 +1,62 @@
+.ludo {
+    width: 800px;
+    height: 800px;
+    border: 5px solid #222;
+    position: relative;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+}
+
+.player {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.2s;
+}
+
+.player-1 {
+    background-color: red;
+}
+
+.player-2 {
+    background-color: green;
+}
+
+.player-3 {
+    background-color: blue;
+}
+
+.player-4 {
+    background-color: yellow;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #f50057;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c51162;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+}
+
+.highlight {
+    background-color: rgba(255, 255, 0, 0.5);
+}
