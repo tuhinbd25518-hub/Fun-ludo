@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Ludo Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { display: flex; flex-direction: column; align-items: center; }
+        .board { display: grid; grid-template-columns: repeat(15, 1fr); grid-template-rows: repeat(15, 1fr); width: 600px; height: 600px; }
+        .cell { border: 1px solid #000; display: flex; align-items: center; justify-content: center; }
+        .dice { display: flex; align-items: center; justify-content: center; font-size: 2em; }
+        .admin-panel { background: #f7f7f7; padding: 20px; margin: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Ludo Game</h1>
+        <div class="board">
+            <!-- Ludo board cells will go here -->
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <!-- Add more cells up to 15x15 grid -->
+        </div>
+        <div class="dice">
+            <button id="rollBtn">Roll Dice</button>
+            <div id="diceResult">-</div>
+        </div>
+        <div class="admin-panel">
+            <h2>Admin Panel</h2>
+            <button id="resetGame">Reset Game</button>
+            <button id="startNewGame">Start New Game</button>
+        </div>
+    </div>
+    <script>
+        let diceResult = document.getElementById('diceResult');
+        let rollBtn = document.getElementById('rollBtn');
+        let resetGame = document.getElementById('resetGame');
+        let startNewGame = document.getElementById('startNewGame');
+        
+        rollBtn.addEventListener('click', () => {
+            let roll = Math.floor(Math.random() * 6) + 1;
+            diceResult.textContent = roll;
+            // Add player movement logic here
+        });
+        
+        resetGame.addEventListener('click', () => {
+            // Logic to reset the game
+            diceResult.textContent = '-';
+        });
+        
+        startNewGame.addEventListener('click', () => {
+            // Logic to start a new game
+            diceResult.textContent = '-';
+        });
+    </script>
+</body>
+</html>
